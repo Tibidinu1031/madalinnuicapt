@@ -66,7 +66,7 @@ tabs.forEach((tab,index) => {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = tabs[(index - 1 + tabs.length) % tabs.length];
     if (event.key === 'Home') next = tabs[0];
     if (event.key === 'End') next = tabs.at(-1);
-    if (next) { event.preventDefault(); next.focus(); next.scrollIntoView({block:'nearest',inline:'center',behavior:'instant'}); }
+    if (next) { event.preventDefault(); next.focus(); next.scrollIntoView({block:'nearest',inline:'center',behavior:'auto'}); }
   });
 });
 const cardMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');

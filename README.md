@@ -15,16 +15,16 @@ Toate căile resurselor sunt relative, deci funcționează și la `https://usern
 
 ## Ce include
 
-- Design adaptat pentru telefon, tabletă și desktop. Hero-ul și bannerul încap împreună în primul ecran, inclusiv în orientare orizontală.
+- Design adaptat pentru telefon, tabletă și desktop. În hero, pe telefon, textul este centrat deasupra fotografiei, în zone separate. Pe desktop, fotografia se estompează spre fundal. Ambele butoane au etichete bold. Hero-ul și bannerul încap împreună în primul ecran, inclusiv în orientare orizontală.
 - Navigație mobilă cu închidere prin Escape și control al focalizării.
-- Carduri fotografice 3D pentru fiecare obiectiv, cu imagini distincte, înclinare la mișcarea cursorului și glisare laterală pe mobil. Fiecare card deschide un popup cu imagine, detalii și buton de contact. Navigarea între carduri funcționează prin tastele săgeată, Home și End; Enter deschide popup-ul, Escape îl închide.
+- Carduri fotografice 3D pentru fiecare obiectiv, cu imagini distincte, înclinare la mișcarea cursorului pe desktop și carduri pe lățime completă pe mobil. Fiecare card deschide un popup cu imagine, detalii și buton de contact. Navigarea între carduri funcționează prin tastele săgeată, Home și End; Enter deschide popup-ul, Escape îl închide.
 - Transferul obiectivului din popup în secțiunea de contact, cu închiderea automată a popup-ului.
 - Pași de lucru și întrebări expandabile.
 - Apel direct la `+40 725 333 024`.
 - Formular care pregătește un mesaj WhatsApp. Vizitatorul îl trimite în aplicația sa, fără un backend și fără stocarea datelor pe site. Numărul este cel public de contact; înregistrarea lui în WhatsApp nu a fost confirmată.
 - Hartă Google Maps încorporată cu căutare și pin, afișată direct în secțiunea Contact, plus link de deschidere în Google Maps.
 - Linkuri directe Facebook, Instagram, TikTok și YouTube, fără redirecționări de căutare Google.
-- Iconițe SVG, fără emoji. Fonturi salvate local. Fundal cu puncte ondulate și animație lentă de val, fără numerotări decorative ale secțiunilor.
+- Iconițe SVG, fără emoji. Fonturi salvate local. Fundal cu puncte gri fixe; o bandă verticală traversează grila de la stânga la dreapta și luminează punctele în alb, fără numerotări decorative ale secțiunilor.
 - Banner continuu spre stânga, animații discrete la derulare și respectarea preferinței pentru mișcare redusă.
 - Metadate SEO și pictogramă SVG pentru browser.
 
@@ -71,3 +71,5 @@ node tools/preview.mjs
 Apoi accesează `http://127.0.0.1:4173`. Folderul `tools` este doar pentru dezvoltare și nu este necesar pentru publicare.
 
 Imaginile de atmosferă pentru cardurile Definire și Primul pas provin din Unsplash: https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b și https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b. Aceste imagini ilustrează tipuri de antrenament și nu reprezintă clienți sau colaboratori ai lui Mădălin.
+
+La corecția din 25 noiembrie 2026 au fost verificate în browser dimensiunile 320x568, 414x896, 768x1024, 844x390 și 1440x900. Nu s-au constatat depășiri orizontale sau suprapuneri între textul și fotografia din hero. Verificarea folosește redimensionarea browserului, nu un iPhone fizic.

@@ -9,7 +9,7 @@ assert.equal(new Set(ids).size, ids.length, 'Duplicate HTML IDs');
 for (const match of html.matchAll(/(?:src|href)="([^"\s]+)"/g)) {
   const value = match[1];
   if (value.startsWith('#')) assert(ids.includes(value.slice(1)), `Missing anchor ${value}`);
-  if (value.startsWith('./')) assert(fs.existsSync(value), `Missing file ${value}`);
+  if (value.startsWith('./')) assert(fs.existsSync(value.split(/[?#]/)[0]), `Missing file ${value}`);
 }
 for (const match of fs.readFileSync('assets/fonts.css','utf8').matchAll(/url\(([^)]+)\)/g)) {
   assert(fs.existsSync(path.join('assets', match[1])), `Missing font ${match[1]}`);
